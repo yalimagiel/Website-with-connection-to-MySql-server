@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="stylesheets/style.css"> <!--connect to the css-->
+	</head>
+	
+	<body>
+	<!--using for the tool bar to navigate in our site -->
+		<ul><li><a href="/">Welcome</a></li>
+		 <li><a href="/Show_All_Walkers">Dog Walkers</a></li>
+</ul>
+         
+		 <h1>Select your favorites Dog Walkers <!--headers for the show all walkera page-->
+ </h1>
+ 		<form action="/Matchchecking" method="post"> <!--transfor the form to POST-->
+        <table class="table1">
+
+            <tr class="tr1"> 
+			<!--The column names in the table-->
+                <td class="ppp"> Choose</td>
+				<td class="ppp"> Name</td>
+                <td class="ppp"> Email </td>
+                <td class="ppp"> Phone Number </td>
+                <td class="ppp"> City </td>
+                <td class="ppp"> Price </td>
+                <td class="ppp"> Day </td>
+            </tr>
+
+            {% for walker_record in list_of_walkers %} <!--displays all possible dog walker in the table-->
+				<tr class="tr1">
+					<td class="td1">
+                     <!-- selection column in the table that save the walker email and his daily shift-->
+					 <input type="checkbox" name="dogwalker" value= "{{walker_record.u_Walker_Email_Adress }},{{walker_record.u_Daily_Shift}}">
+					
+                    </td>
+					<!--displays the possible dog walker in the table-->
+					<td class="td1">{{walker_record.u_WalkerName }} </td>
+					<td class="td1">{{walker_record.u_Walker_Email_Adress }} </td>
+					<td class="td1">{{walker_record.u_Phone_Number }} </td>
+					<td class="td1">{{walker_record.u_City}} </td>
+                    <td class="td1">{{walker_record.u_Daily_Price}} </td>
+                    <td class="td1">{{walker_record.u_Daily_Shift}} </td>
+				</tr>
+			{% endfor %}
+
+        </table>
+        
+        <br><br>
+
+
+<div class="dogques"></div> <!--picture-->
+        <!--a button that make a transfer to matchchacking-->
+						<input type="submit" value="Send" class="button button2">  
+					
+        </form>
+
+	</body>
+</html>

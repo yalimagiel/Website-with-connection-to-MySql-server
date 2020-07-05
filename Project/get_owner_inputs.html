@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="stylesheets/style.css"> <!--connect to the css-->
+	</head>
+	
+	
+		<ul><li><a href="/welcome">Welcome</a></li> <!--using for the tool bar to navigate in our site -->
+	     <li><a href="/Get_Owner_Inputs">Sign In</a></li></ul><!--using for the tool bar to navigate in our site -->
+<body>
+         
+        
+		 <h1>Let's Start! </h1><!--headers for the get owner inputs page-->
+		<form action="/GetInfo" method="post"><!--transfor the form to POST-->
+             <table>
+                <tr>
+                    <td class="h1">
+						<p>Please put your details here:</p> 
+					</td>
+                </tr>
+</table>
+<table> <!--a table that contains the owner info-->
+                <tr>
+                    <td class="ppp">
+						Full Name:
+						</td>
+                    <td >
+						<input type="text" name="OwnerName" class="wider">
+					</td>
+                </tr>
+
+               
+                <tr>
+                    <td class="ppp">
+						Phone Number:
+					</td>
+                    <td>
+						<input id=telNo type="tel" name="Phone_Number">
+					</td>
+                </tr>
+                <tr>
+                    <td class="ppp">
+						City:
+					</td>
+                    
+<td>
+  <select name="City">
+   <option value="Select">Select</option>
+              {% for city_record in list_of_city %} <!--display the optional city from the DB-->
+
+    <option value="{{city_record.u_City}}">{{city_record.u_City}}</option>
+   {% endfor %}
+  </select>
+  </td>
+  </table>
+  <br><br>
+  
+  <table></div>
+                <tr>
+                    <td class="h1">
+						<p>Please put your Dog's details here: </p>
+					</td>
+                </tr>
+</table>
+<table><!--a table that contains the dog info-->
+                <tr>
+                    <td class="ppp">
+						Name:
+					</td>
+                    <td >
+						<input type="text" name="DogName" class="wider">
+					</td>
+                </tr>
+
+                <tr>
+                    <td class="ppp">
+						Sex:
+					</td>
+                    
+                    <td>
+						  <input type="radio" name="gender" value="male" checked > Male<br>
+                          </tr>
+                          <tr>
+                          <td></td>
+                          <td>
+  <input type="radio" name="gender" value="female"> Female
+					</td>
+                </tr>
+                <tr>
+                    <td class="ppp">
+						Type:
+					</td>
+                    <td>
+  <select name="Type">
+  <option value="Select">Select</option>
+    <option value="Beagle">Beagle</option>
+    <option value="Bulldog">Bulldog</option>
+    <option value="Dalmatian">Dalmatian</option>
+    <option value="Golden Retriever">Golden Retriever</option>
+    <option value="Pitbull">Pitbull</option>
+
+  </select>
+  </td>
+                </tr>
+                <tr>
+  
+  
+  </table>
+  
+  <table> <!--a table that contains all the optioanl days for work-->
+  	<tr>
+  		<td class="h1">
+						<p>Which days do you prefer?</p><tr></tr>
+						
+					</td>
+					</table>
+					<table>
+         <td></td><td>
+         		<input type="checkbox" name="days" value="Sunday"> Sunday<br>         
+         </td>
+         <tr>
+         <td></td>
+         <td>
+  				<input type="checkbox" name="days" value="Monday"> Monday <br>
+                </td>
+         <tr>
+         <td></td>
+         <td>
+                <input type="checkbox" name="days" value="Tuesday"> Tuesday <br> 
+                </td>
+         <tr>
+         <td></td>
+         <td>
+                <input type="checkbox" name="days" value="Wednesday"> Wednesday <br>
+                </td>
+         <tr>
+         <td></td>
+         <td>
+                <input type="checkbox" name="days" value="Thursday"> Thursday <br>
+                </td>
+         <tr>
+         <td></td>
+         <td>
+                <input type="checkbox" name="days" value="Friday"> Friday <br> 
+                </td>
+         <tr>
+         <td></td>
+         <td>
+                <input type="checkbox" name="days" value="Saturday"> Saturday <br> 
+         </td>
+     </tr>
+   </table>
+  
+<br><br>
+  <div class="walker"></div><!--picture-->                
+            <!--a button that make a transfer to the show all walkers page and transfer the details from this page to the DB   -->
+						<input type="submit" value="Let's find your match" class="button button2"> 
+
+        </form>
+
+	</body>
+</html>

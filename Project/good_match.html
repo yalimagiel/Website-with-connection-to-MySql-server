@@ -1,0 +1,25 @@
+<html>
+	<head>
+        <link rel="stylesheet" type="text/css" href="stylesheets/style.css"> <!--connect to the css-->
+	</head>
+	<!--using for the tool bar to navigate in our site -->
+		<ul><li><a href="/">Welcome</a></li>
+		 <li><a href="/Show_All_Walkers">Dog Walkers</a></li>
+</ul>
+       
+         
+		 <h1> We found your match </h1> <!--headers for the good match page-->
+	<body>
+         {% for final_walker in final_walker_list %}<!--show all the posiblle dog walker that have been selected -->
+		<p>Hi<br><!--a message that display to the owner to sum up the order-->
+        Can't wait to meet your dog at {{final_walker.u_the_chosen_day}}<br>
+        If you need more information you can find me - {{final_walker.u_the_chosen_walker}}<br>
+        Can't wait to see you, <br>
+        Your Dog Walker
+		<br><br></p>
+		{% endfor %}
+				<br><br>
+		<div class="dog2"></div><!--picture-->
+	</body>
+</html>
+

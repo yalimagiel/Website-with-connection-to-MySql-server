@@ -1,0 +1,159 @@
+
+
+body {
+    background-image: url("newbackground.jpg");
+	
+	width: 100%;
+	height:100%;
+	background-attachment: scroll;
+
+	
+	
+	
+}
+
+
+h1 {
+    color: #004e66;
+    text-align: center;
+    font-size: 90px;
+font-family: Brush Script MT;
+
+
+}
+
+p {
+    color: #e67300;
+	text-align: center;
+    font-family: Tahoma;
+    font-size: 35px;
+}
+
+.ppp {
+    color: black;
+	text-align: left;
+    font-family: Tahoma;
+    font-size: 25px;
+}
+
+	
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ccf3ff;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #004e66;
+    font-weight: bold;
+    text-align: center;
+    padding: 16px 25px;
+    text-decoration: none;
+	  font-family: Tahoma;
+font-size: 20px;
+}
+  
+ 
+ div.walkerpic {
+ height: 275px;
+ width: 397px;
+  margin-left: auto;
+    margin-right: auto;
+  
+left:400px;
+ 
+background: url("newdog.gif") ;}
+
+ div.walker {
+ height: 329px;
+ width: 236px;
+  margin-left: auto;
+    margin-right: auto;
+  
+left:400px;
+ 
+background: url("newdog.png") ;}
+
+ div.dog2 {
+ left:400px;
+ height: 111px;
+ width: 125px;
+ margin-left: auto;
+ margin-right: auto;
+	
+background: url("gooddog.gif") ;}
+
+.button {
+
+   background-color: #4CAF50;
+    border: none;
+    color: blue;
+    padding: 15px 32px;
+    text-align: center;
+    
+    
+    font-size: 16px;
+margin: 20px 650px;
+    cursor: pointer;
+	
+}
+
+.button2 {
+    background-color: #ccf3ff; 
+    color: #005c99; 
+    border: 2px solid #008CBA;
+
+}
+
+.button2:hover {
+    background-color: #005c99
+;
+    color: white;
+}
+
+	 div.dogques {
+ height: 380px;
+ width: 400px;
+  margin-left: auto;
+    margin-right: auto;
+  
+left:400px;
+ 
+background: url("dogques.png") ;}
+
+	 div.dogsad {
+ height: 540px;
+ width: 506px;
+  margin-left: auto;
+    margin-right: auto;
+  
+left:400px;
+ 
+background: url("sorrydog.png") ;}
+
+.table1 {
+    border-collapse: collapse;
+    
+    width: 100%;
+}
+
+.th1, .td1 {
+    text-align: left;
+    padding: 8px;
+	font-family: Tahoma;
+}
+
+.tr1:nth-child(odd){background-color: #e6f2ff}
+
+.th1 {background-color: #cce6ff;
+    
+    color: white;
+	font-family: Tahoma;
+}
